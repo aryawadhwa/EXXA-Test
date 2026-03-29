@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🌌 EXXA: Denoising Protoplanetary Disks</h1>
+  <h1>EXXA: Denoising Protoplanetary Disks</h1>
   <p><i>Official Implementation for the ML4SCI GSoC 2026 Test Tasks</i></p>
 
   [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
@@ -10,27 +10,27 @@
 
 ---
 
-## 📖 Overview
-This repository contains the complete execution deliverables for the **ML4SCI EXXA** program. It provides robust PyTorch-based machine learning pipelines designed to automatically process, cluster, and denoise interferometric representations of protoplanetary disks, rendering critical planet-forming insights at extreme speeds.
+## Overview
+This repository contains the complete execution deliverables for the **ML4SCI EXXA** program. It provides robust PyTorch-based machine learning pipelines designed to process, cluster, and denoise interferometric representations of protoplanetary disks.
 
-The codebase mathematically satisfies all three mandatory GSoC EXXA test criteria:
+The codebase satisfies the three mandatory GSoC EXXA test criteria:
 1. **General Test:** Unsupervised algorithmic clustering of ALMA FITS observations via continuous Latent Manifolds.
-2. **Image-Based Test:** Fast deterministic MS-SSIM Autoencoder capable of structural reconstruction without gap-erosion.
-3. **Sequential Test:** A 1D-CNN temporal classifier trained to natively isolate periodic exoplanetary transit anomalies from massively noisy astronomical light curves.
+2. **Image-Based Test:** Fast deterministic MS-SSIM Autoencoder capable of structural reconstruction.
+3. **Sequential Test:** A 1D-CNN temporal classifier trained to isolate periodic exoplanetary transit anomalies from astronomical light curves.
 
 ---
 
-## 📊 Scientific Validations
+## Scientific Validations
 
-### 1. Unsupervised Disk Clustering (UMAP $\rightarrow$ K-Means)
-The pipeline intrinsically separates physical protoplanetary morphologies (0 planets vs 1+ planets) without relying on human labels.
+### 1. Unsupervised Disk Clustering (UMAP to K-Means)
+The pipeline intrinsically separates physical protoplanetary morphologies without relying on human labels.
 <p align="center">
   <img src="assets/results/umap_projection.png" width="45%" alt="UMAP Projection"/>
   <img src="assets/results/cluster_gallery.png" width="45%" alt="Cluster Gallery"/>
 </p>
 
 ### 2. Autoencoder Objective Convergence (MSE and MS-SSIM)
-By strictly preventing Max Pooling in the convolutional backbone, the MS-SSIM structural loss successfully optimizes planet radii fidelity.
+By omitting Max Pooling in the convolutional backbone, the MS-SSIM structural loss optimizes planet radii fidelity.
 <p align="center">
   <img src="assets/results/loss_curves.png" width="45%" alt="Loss Curves"/>
   <img src="assets/results/silhouette_score.png" width="45%" alt="Silhouette Analysis"/>
@@ -38,8 +38,8 @@ By strictly preventing Max Pooling in the convolutional backbone, the MS-SSIM st
 
 ---
 
-## 🗂️ Professional Repository Structure
-The codebase has been refactored for maximum reproducibility, transitioning raw scripts into a highly modular engineering standard.
+## Professional Repository Structure
+The codebase has been refactored for reproducibility, transitioning raw scripts into a highly modular engineering standard.
 
 ```text
 /EXXA-Test
@@ -58,7 +58,7 @@ The codebase has been refactored for maximum reproducibility, transitioning raw 
 
 ---
 
-## 🚀 Execution & Reproducibility
+## Execution & Reproducibility
 
 To recreate the test executions, replicate the environment metrics:
 
@@ -74,5 +74,5 @@ pip install -r requirements.txt
 jupyter notebook notebooks/EXXA_ALMA_Autoencoder.ipynb
 ```
 
-## 🧠 Technologies Built Upon
+## Technologies Built Upon
 Astropy, PyTorch, Scikit-Learn (UMAP), Matplotlib, AdamW Optimization.
