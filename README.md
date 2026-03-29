@@ -64,7 +64,7 @@ To recreate the test executions, replicate the environment metrics:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/aryawadhwa/EXXA-Test.git
+git clone https://gitlab.com/aryawadhwa/EXXA-Test.git
 cd EXXA-Test
 
 # 2. Install PyTorch dependencies
